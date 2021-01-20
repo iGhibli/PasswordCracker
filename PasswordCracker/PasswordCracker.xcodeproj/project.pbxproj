@@ -1,0 +1,490 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5884EFDFFA9705486CC66D03 /* Pods_PasswordCracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1F40F2476A44011B534C6DB /* Pods_PasswordCracker.framework */; };
+		B99222DE25B7FD7F00884905 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99222DD25B7FD7F00884905 /* AppDelegate.swift */; };
+		B99222E025B7FD7F00884905 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99222DF25B7FD7F00884905 /* SceneDelegate.swift */; };
+		B99222E525B7FD7F00884905 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B99222E325B7FD7F00884905 /* Main.storyboard */; };
+		B99222E725B7FD8000884905 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B99222E625B7FD8000884905 /* Assets.xcassets */; };
+		B99222EA25B7FD8000884905 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B99222E825B7FD8000884905 /* LaunchScreen.storyboard */; };
+		B992233125B804C000884905 /* SPayPassWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B992233025B804C000884905 /* SPayPassWordView.swift */; };
+		B992233C25B8056700884905 /* InputVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B992233B25B8056700884905 /* InputVC.swift */; };
+		B992234125B805A200884905 /* OutputVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B992234025B805A200884905 /* OutputVC.swift */; };
+		B992234625B8069800884905 /* TabBarC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B992234525B8069800884905 /* TabBarC.swift */; };
+		B992234B25B807D700884905 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B992234A25B807D700884905 /* TabBar.swift */; };
+		B992238925B856B900884905 /* NumbersCVFLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B992238825B856B900884905 /* NumbersCVFLayout.swift */; };
+		B992238D25B8570800884905 /* NumbersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B992238C25B8570800884905 /* NumbersCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		901FE28191D71CA15B88761D /* Pods-PasswordCracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PasswordCracker.release.xcconfig"; path = "Target Support Files/Pods-PasswordCracker/Pods-PasswordCracker.release.xcconfig"; sourceTree = "<group>"; };
+		B99222DA25B7FD7F00884905 /* PasswordCracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PasswordCracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B99222DD25B7FD7F00884905 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B99222DF25B7FD7F00884905 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B99222E425B7FD7F00884905 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B99222E625B7FD8000884905 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B99222E925B7FD8000884905 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B99222EB25B7FD8000884905 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B992233025B804C000884905 /* SPayPassWordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPayPassWordView.swift; sourceTree = "<group>"; };
+		B992233B25B8056700884905 /* InputVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputVC.swift; sourceTree = "<group>"; };
+		B992234025B805A200884905 /* OutputVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputVC.swift; sourceTree = "<group>"; };
+		B992234525B8069800884905 /* TabBarC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarC.swift; sourceTree = "<group>"; };
+		B992234A25B807D700884905 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		B992238825B856B900884905 /* NumbersCVFLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersCVFLayout.swift; sourceTree = "<group>"; };
+		B992238C25B8570800884905 /* NumbersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersCell.swift; sourceTree = "<group>"; };
+		C1F40F2476A44011B534C6DB /* Pods_PasswordCracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PasswordCracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE21A2B554B1925D213E297E /* Pods-PasswordCracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PasswordCracker.debug.xcconfig"; path = "Target Support Files/Pods-PasswordCracker/Pods-PasswordCracker.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B99222D725B7FD7F00884905 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5884EFDFFA9705486CC66D03 /* Pods_PasswordCracker.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8EB4637BA98087ED418C6FA9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CE21A2B554B1925D213E297E /* Pods-PasswordCracker.debug.xcconfig */,
+				901FE28191D71CA15B88761D /* Pods-PasswordCracker.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B99222D125B7FD7F00884905 = {
+			isa = PBXGroup;
+			children = (
+				B99222DC25B7FD7F00884905 /* PasswordCracker */,
+				B99222DB25B7FD7F00884905 /* Products */,
+				E89407D8A9CEE9BC00FD82EC /* Frameworks */,
+				8EB4637BA98087ED418C6FA9 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		B99222DB25B7FD7F00884905 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B99222DA25B7FD7F00884905 /* PasswordCracker.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B99222DC25B7FD7F00884905 /* PasswordCracker */ = {
+			isa = PBXGroup;
+			children = (
+				B992238725B8566600884905 /* Models */,
+				B992238625B8566000884905 /* Views */,
+				B992232325B8042C00884905 /* Tools */,
+				B992232225B8042000884905 /* VCs */,
+				B992231E25B8040A00884905 /* Main */,
+				B992231D25B803E900884905 /* Resource */,
+			);
+			path = PasswordCracker;
+			sourceTree = "<group>";
+		};
+		B992231D25B803E900884905 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				B99222EB25B7FD8000884905 /* Info.plist */,
+				B99222E625B7FD8000884905 /* Assets.xcassets */,
+				B99222E325B7FD7F00884905 /* Main.storyboard */,
+				B99222E825B7FD8000884905 /* LaunchScreen.storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		B992231E25B8040A00884905 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				B99222DD25B7FD7F00884905 /* AppDelegate.swift */,
+				B99222DF25B7FD7F00884905 /* SceneDelegate.swift */,
+				B992234525B8069800884905 /* TabBarC.swift */,
+				B992234A25B807D700884905 /* TabBar.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		B992232225B8042000884905 /* VCs */ = {
+			isa = PBXGroup;
+			children = (
+				B992233B25B8056700884905 /* InputVC.swift */,
+				B992234025B805A200884905 /* OutputVC.swift */,
+			);
+			path = VCs;
+			sourceTree = "<group>";
+		};
+		B992232325B8042C00884905 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				B992233025B804C000884905 /* SPayPassWordView.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		B992238625B8566000884905 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B992238825B856B900884905 /* NumbersCVFLayout.swift */,
+				B992238C25B8570800884905 /* NumbersCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B992238725B8566600884905 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E89407D8A9CEE9BC00FD82EC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C1F40F2476A44011B534C6DB /* Pods_PasswordCracker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B99222D925B7FD7F00884905 /* PasswordCracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B992230425B7FD8000884905 /* Build configuration list for PBXNativeTarget "PasswordCracker" */;
+			buildPhases = (
+				8C8A931A736BE5C0169CF60D /* [CP] Check Pods Manifest.lock */,
+				B99222D625B7FD7F00884905 /* Sources */,
+				B99222D725B7FD7F00884905 /* Frameworks */,
+				B99222D825B7FD7F00884905 /* Resources */,
+				6F569C34D33FEC8E99A4682E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PasswordCracker;
+			productName = PasswordCracker;
+			productReference = B99222DA25B7FD7F00884905 /* PasswordCracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B99222D225B7FD7F00884905 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					B99222D925B7FD7F00884905 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+				};
+			};
+			buildConfigurationList = B99222D525B7FD7F00884905 /* Build configuration list for PBXProject "PasswordCracker" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B99222D125B7FD7F00884905;
+			productRefGroup = B99222DB25B7FD7F00884905 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B99222D925B7FD7F00884905 /* PasswordCracker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B99222D825B7FD7F00884905 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B99222EA25B7FD8000884905 /* LaunchScreen.storyboard in Resources */,
+				B99222E725B7FD8000884905 /* Assets.xcassets in Resources */,
+				B99222E525B7FD7F00884905 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6F569C34D33FEC8E99A4682E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PasswordCracker/Pods-PasswordCracker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PasswordCracker/Pods-PasswordCracker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PasswordCracker/Pods-PasswordCracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C8A931A736BE5C0169CF60D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PasswordCracker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B99222D625B7FD7F00884905 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B992233C25B8056700884905 /* InputVC.swift in Sources */,
+				B992234125B805A200884905 /* OutputVC.swift in Sources */,
+				B992238925B856B900884905 /* NumbersCVFLayout.swift in Sources */,
+				B992233125B804C000884905 /* SPayPassWordView.swift in Sources */,
+				B992234B25B807D700884905 /* TabBar.swift in Sources */,
+				B992234625B8069800884905 /* TabBarC.swift in Sources */,
+				B99222DE25B7FD7F00884905 /* AppDelegate.swift in Sources */,
+				B99222E025B7FD7F00884905 /* SceneDelegate.swift in Sources */,
+				B992238D25B8570800884905 /* NumbersCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B99222E325B7FD7F00884905 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B99222E425B7FD7F00884905 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B99222E825B7FD8000884905 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B99222E925B7FD8000884905 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B992230225B7FD8000884905 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B992230325B7FD8000884905 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B992230525B7FD8000884905 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE21A2B554B1925D213E297E /* Pods-PasswordCracker.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = G5G45AG832;
+				INFOPLIST_FILE = PasswordCracker/Resource/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.iGhibli.PasswordCracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = neibu2_20210115_dev;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B992230625B7FD8000884905 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 901FE28191D71CA15B88761D /* Pods-PasswordCracker.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = G5G45AG832;
+				INFOPLIST_FILE = PasswordCracker/Resource/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.iGhibli.PasswordCracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = neibu2_20210115_dev;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B99222D525B7FD7F00884905 /* Build configuration list for PBXProject "PasswordCracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B992230225B7FD8000884905 /* Debug */,
+				B992230325B7FD8000884905 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B992230425B7FD8000884905 /* Build configuration list for PBXNativeTarget "PasswordCracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B992230525B7FD8000884905 /* Debug */,
+				B992230625B7FD8000884905 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B99222D225B7FD7F00884905 /* Project object */;
+}
