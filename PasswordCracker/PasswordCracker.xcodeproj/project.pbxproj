@@ -20,7 +20,28 @@
 		B992234B25B807D700884905 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B992234A25B807D700884905 /* TabBar.swift */; };
 		B992238925B856B900884905 /* NumbersCVFLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B992238825B856B900884905 /* NumbersCVFLayout.swift */; };
 		B992238D25B8570800884905 /* NumbersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B992238C25B8570800884905 /* NumbersCell.swift */; };
+		B992239325B92AA000884905 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B992239025B929EF00884905 /* RealmSwift.framework */; };
+		B992239425B92AA000884905 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B992239025B929EF00884905 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B99223A025B9304300884905 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B992239E25B9303F00884905 /* Realm.framework */; };
+		B99223A125B9304300884905 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B992239E25B9303F00884905 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B99223A325B9313600884905 /* Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99223A225B9313600884905 /* Number.swift */; };
+		B99223CB25B973BB00884905 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99223CA25B973BB00884905 /* SettingVC.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B992239525B92AA000884905 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B99223A125B9304300884905 /* Realm.framework in Embed Frameworks */,
+				B992239425B92AA000884905 /* RealmSwift.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		901FE28191D71CA15B88761D /* Pods-PasswordCracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PasswordCracker.release.xcconfig"; path = "Target Support Files/Pods-PasswordCracker/Pods-PasswordCracker.release.xcconfig"; sourceTree = "<group>"; };
@@ -38,6 +59,10 @@
 		B992234A25B807D700884905 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		B992238825B856B900884905 /* NumbersCVFLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersCVFLayout.swift; sourceTree = "<group>"; };
 		B992238C25B8570800884905 /* NumbersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersCell.swift; sourceTree = "<group>"; };
+		B992239025B929EF00884905 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		B992239E25B9303F00884905 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		B99223A225B9313600884905 /* Number.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Number.swift; sourceTree = "<group>"; };
+		B99223CA25B973BB00884905 /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
 		C1F40F2476A44011B534C6DB /* Pods_PasswordCracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PasswordCracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE21A2B554B1925D213E297E /* Pods-PasswordCracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PasswordCracker.debug.xcconfig"; path = "Target Support Files/Pods-PasswordCracker/Pods-PasswordCracker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -47,6 +72,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B99223A025B9304300884905 /* Realm.framework in Frameworks */,
+				B992239325B92AA000884905 /* RealmSwift.framework in Frameworks */,
 				5884EFDFFA9705486CC66D03 /* Pods_PasswordCracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -84,6 +111,7 @@
 		B99222DC25B7FD7F00884905 /* PasswordCracker */ = {
 			isa = PBXGroup;
 			children = (
+				B992238F25B929EF00884905 /* Third */,
 				B992238725B8566600884905 /* Models */,
 				B992238625B8566000884905 /* Views */,
 				B992232325B8042C00884905 /* Tools */,
@@ -121,6 +149,7 @@
 			children = (
 				B992233B25B8056700884905 /* InputVC.swift */,
 				B992234025B805A200884905 /* OutputVC.swift */,
+				B99223CA25B973BB00884905 /* SettingVC.swift */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -145,8 +174,18 @@
 		B992238725B8566600884905 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B99223A225B9313600884905 /* Number.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		B992238F25B929EF00884905 /* Third */ = {
+			isa = PBXGroup;
+			children = (
+				B992239E25B9303F00884905 /* Realm.framework */,
+				B992239025B929EF00884905 /* RealmSwift.framework */,
+			);
+			path = Third;
 			sourceTree = "<group>";
 		};
 		E89407D8A9CEE9BC00FD82EC /* Frameworks */ = {
@@ -169,6 +208,7 @@
 				B99222D725B7FD7F00884905 /* Frameworks */,
 				B99222D825B7FD7F00884905 /* Resources */,
 				6F569C34D33FEC8E99A4682E /* [CP] Embed Pods Frameworks */,
+				B992239525B92AA000884905 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -267,12 +307,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B99223A325B9313600884905 /* Number.swift in Sources */,
 				B992233C25B8056700884905 /* InputVC.swift in Sources */,
 				B992234125B805A200884905 /* OutputVC.swift in Sources */,
 				B992238925B856B900884905 /* NumbersCVFLayout.swift in Sources */,
 				B992233125B804C000884905 /* SPayPassWordView.swift in Sources */,
 				B992234B25B807D700884905 /* TabBar.swift in Sources */,
 				B992234625B8069800884905 /* TabBarC.swift in Sources */,
+				B99223CB25B973BB00884905 /* SettingVC.swift in Sources */,
 				B99222DE25B7FD7F00884905 /* AppDelegate.swift in Sources */,
 				B99222E025B7FD7F00884905 /* SceneDelegate.swift in Sources */,
 				B992238D25B8570800884905 /* NumbersCell.swift in Sources */,
@@ -426,6 +468,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = G5G45AG832;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PasswordCracker/Third",
+				);
 				INFOPLIST_FILE = PasswordCracker/Resource/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -449,6 +495,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = G5G45AG832;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PasswordCracker/Third",
+				);
 				INFOPLIST_FILE = PasswordCracker/Resource/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (

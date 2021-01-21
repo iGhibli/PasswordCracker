@@ -7,9 +7,13 @@
 
 import UIKit
 import SnapKit
+import RealmSwift
 
 class InputVC: UIViewController {
 
+    let realm = try! Realm()
+    var currentNumber: Number?
+    
     lazy var pwInputView: SPayPassWordView = {
         let pw = SPayPassWordView()
         pw.lenght = 6
@@ -35,12 +39,19 @@ class InputVC: UIViewController {
         button.titleLabel?.font = UIFont.systemFont(ofSize: 28)
         button.layer.masksToBounds = true
         button.layer.cornerRadius = 8.0
+        button.isUserInteractionEnabled = false
+        button.addTarget(self, action: #selector(inputAction(sender:)), for: .touchUpInside)
         return button
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        print("Realm file path: " + Realm.Configuration.defaultConfiguration.fileURL!.absoluteString)
+        
+        let barButtonItem = UIBarButtonItem(image: UIImage(systemName: "command.circle"), style: .done, target: self, action:#selector(showSettingVC))
+        navigationItem.rightBarButtonItem = barButtonItem
+        
         view.addSubview(pwInputView)
         
         pwInputView.snp.makeConstraints { (make) in
@@ -82,6 +93,27 @@ class InputVC: UIViewController {
         }
     }
     
+    @objc func inputAction(sender: UIButton) {
+        do {
+            try realm.write {
+                if let tmp = currentNumber {
+                    tmp.cfmd = true
+                }
+            }
+            
+            self.inputEnabledChange(isEnabled: false, with: "此密码已录入成功!")
+        } catch {
+            print(error)
+        }
+    }
+    
+    @objc func showSettingVC() {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SettingVCID")
+        self.present(vc, animated: true) {
+            
+        }
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         pwInputView.textField.resignFirstResponder()
     }
@@ -96,12 +128,14 @@ extension InputVC: SPayPassWordViewDelegate {
     func entryComplete(password: String) {
         print("entryComplete" + password)
         // 从数据库里查询是否已经存在
-        if true {
-            self.inputEnabledChange(isEnabled: false, with: "此密码已经尝试过!")
-        }else {
-            // 录入
+        let results = realm.objects(Number.self).filter("number == %@", password)
+        for result in results {
+            if result.cfmd {
+                self.inputEnabledChange(isEnabled: false, with: "此密码已经尝试过!")
+            }else {
+                self.inputEnabledChange(isEnabled: true, with: "")
+            }
         }
-        
     }
     
 }

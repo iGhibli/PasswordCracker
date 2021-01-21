@@ -7,9 +7,14 @@
 
 import UIKit
 import SnapKit
+import RealmSwift
 
 class OutputVC: UIViewController {
 
+    let realm = try! Realm()
+    
+    var numbers: Results<Number>?
+    
     lazy var collection: UICollectionView = {
         let layout = NumbersCVFLayout.init()
         let cv = UICollectionView(frame: CGRect(x: 0, y: 0, width: 0, height: 0), collectionViewLayout: layout)
@@ -36,6 +41,12 @@ class OutputVC: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         
+        let barButtonItem = UIBarButtonItem(image: UIImage(systemName: "command.circle"), style: .done, target: self, action:#selector(showSettingVC))
+        navigationItem.rightBarButtonItem = barButtonItem
+        
+        // todo: 取数据
+        numbers = realm.objects(Number.self)
+        
         view.addSubview(getButton)
         getButton.snp.makeConstraints { (make) in
             make.left.equalToSuperview().offset(5)
@@ -56,6 +67,13 @@ class OutputVC: UIViewController {
     
     @objc func getNumbers(sender: UIButton) {
         
+    }
+    
+    @objc func showSettingVC() {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SettingVCID")
+        self.present(vc, animated: true) {
+            
+        }
     }
 }
 
