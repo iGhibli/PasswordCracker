@@ -47,6 +47,7 @@ class InputVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        self.title = "自主录入"
         print("Realm file path: " + Realm.Configuration.defaultConfiguration.fileURL!.absoluteString)
         
         let barButtonItem = UIBarButtonItem(image: UIImage(systemName: "command.circle"), style: .done, target: self, action:#selector(showSettingVC))
@@ -109,9 +110,7 @@ class InputVC: UIViewController {
     
     @objc func showSettingVC() {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SettingVCID")
-        self.present(vc, animated: true) {
-            
-        }
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

@@ -19,12 +19,7 @@ class SettingVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let numbers = realm.objects(Number.self)
-        totalNumber.text = "\(numbers.count)个"
-        let cfmds = realm.objects(Number.self).filter("cfmd == true")
-        cfmdNumber.text = "\(cfmds.count)个"
-        let cfms = realm.objects(Number.self).filter("cfmd == false")
-        cfmNumber.text = "\(cfms.count)个"
+        self.reloadData()
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 0 && indexPath.row == 0 {
@@ -38,26 +33,49 @@ class SettingVC: UITableViewController {
                 
             }))
             alterC.addAction(UIAlertAction(title: "确定", style: .destructive, handler: { (action) in
-                HUD.show(.progress, onView: self.view)
-                if let str = alterC.textFields?.first?.text,
-                   let count = Int(str) {
-                    self.createDB(count: count)
-                }else {
-                    HUD.flash(.error, onView: self.view, delay: 1.5)
-                }
+                self.alterCAction(tfStr: alterC.textFields?.first?.text)
             }))
             self.present(alterC, animated: true) { }
         }else if indexPath.section == 2 && indexPath.row == 0 {
             // 导出当前密码库
-            HUD.flash(.labeledImage(image: UIImage(systemName: "terminal.fill"), title: "开发中...", subtitle: "敬请期待！"), onView: self.view, delay: 1.5)
-        }else if indexPath.section == 2 && indexPath.row == 2 {
+            DispatchQueue.main.async {
+                HUD.flash(.label("开发中..."), onView: self.view, delay: 1.5)
+            }
+        }else if indexPath.section == 2 && indexPath.row == 1 {
             // 导入当前密码库
-            HUD.flash(.labeledImage(image: UIImage(systemName: "terminal.fill"), title: "开发中...", subtitle: "敬请期待！"), onView: self.view, delay: 1.5)
+            DispatchQueue.main.async {
+                HUD.flash(.label("开发中..."), onView: self.view, delay: 1.5)
+            }
+        }
+    }
+    
+    func alterCAction(tfStr: String?) {
+        
+        DispatchQueue.main.async {
+            HUD.show(.labeledProgress(title: nil, subtitle: "密码库创建中"), onView: self.view)
+        }
+        
+        if let str = tfStr, let count = Int(str) {
+            self.createDB(count: count)
+        }else {
+            DispatchQueue.main.async {
+                HUD.flash(.labeledError(title: nil, subtitle: "密码库创建失败"), onView: self.view, delay: 1.5)
+            }
         }
     }
     
     func createDB(count: Int) {
-
+        
+        // 清空数据库
+        do {
+            try self.realm.write {
+                self.realm.deleteAll()
+            }
+        } catch {
+            print("error")
+        }
+        
+        
         var maxStr = ""
         for _ in 0..<count {
             maxStr.append("9")
@@ -80,10 +98,27 @@ class SettingVC: UITableViewController {
                     print("error")
                 }
             }
-            HUD.flash(.success, onView: self.view, delay: 1.5)
+            DispatchQueue.main.async {
+                self.reloadData()
+                HUD.flash(.labeledSuccess(title: nil, subtitle: "密码库创建成功"), onView: self.view, delay: 1.5)
+            }
         }else {
-            HUD.flash(.error, onView: self.view, delay: 1.5)
+            DispatchQueue.main.async {
+                HUD.flash(.labeledError(title: nil, subtitle: "密码库创建失败"), onView: self.view, delay: 1.5)
+            }
         }
     }
+    
+    func reloadData() {
+        DispatchQueue.main.async {
+            let numbers = self.realm.objects(Number.self)
+            self.totalNumber.text = "\(numbers.count)个"
+            let cfmds = self.realm.objects(Number.self).filter("cfmd == true")
+            self.cfmdNumber.text = "\(cfmds.count)个"
+            let cfms = self.realm.objects(Number.self).filter("cfmd == false")
+            self.cfmNumber.text = "\(cfms.count)个"
+        }
+    }
+    
 }
 

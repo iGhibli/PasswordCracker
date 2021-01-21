@@ -14,6 +14,10 @@ class Number: Object {
         Date().timeStamp
     }()
     @objc dynamic var cfmd = false
+    
+    override static func primaryKey() -> String? {
+        return "number"
+    }
 }
 
 extension Date {

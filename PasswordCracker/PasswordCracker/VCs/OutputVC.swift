@@ -40,12 +40,10 @@ class OutputVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        self.title = "随机获取"
         
         let barButtonItem = UIBarButtonItem(image: UIImage(systemName: "command.circle"), style: .done, target: self, action:#selector(showSettingVC))
         navigationItem.rightBarButtonItem = barButtonItem
-        
-        // todo: 取数据
-        numbers = realm.objects(Number.self)
         
         view.addSubview(getButton)
         getButton.snp.makeConstraints { (make) in
@@ -66,14 +64,14 @@ class OutputVC: UIViewController {
     }
     
     @objc func getNumbers(sender: UIButton) {
-        
+        // todo: 取数据
+        numbers = realm.objects(Number.self).filter("cfmd == false")
+        collection.reloadData()
     }
     
     @objc func showSettingVC() {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SettingVCID")
-        self.present(vc, animated: true) {
-            
-        }
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 
@@ -88,13 +86,31 @@ extension OutputVC: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NumbersCell.reuseIdentifier, for: indexPath) as! NumbersCell
-        cell.titleLabel.text = "888888"
+        cell.titleLabel.text = ""
+        if numbers?.count ?? 0 > indexPath.item {
+            if let num = numbers?[indexPath.item] {
+                cell.titleLabel.text = num.number
+                cell.titleLabel.textColor = num.cfmd ? .lightGray:.black
+            }
+        }
         return cell
     }
 }
 
 extension OutputVC: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        if numbers?.count ?? 0 > indexPath.item {
+            if let num = numbers?[indexPath.item] {
+                do {
+                    try realm.write {
+                        num.cfmd = true
+                    }
+                    let cell = collection.cellForItem(at: indexPath) as! NumbersCell
+                    cell.titleLabel.textColor = .lightGray
+                } catch {
+                    print(error)
+                }
+            }
+        }
     }
 }
