@@ -36,6 +36,12 @@ class SettingVC: UITableViewController {
                         try FileManager.default.removeItem(at: defaultURL)
                         try FileManager.default.copyItem(at: URL(fileURLWithPath: bundleURL), to: defaultURL)
                         self.reloadData()
+                        
+                        let aC = UIAlertController(title: "密码库已重置完成", message: "密码库已重置完成，请退出并重新打开APP！！！", preferredStyle: .alert)
+                        aC.addAction(UIAlertAction(title: "确定", style: .default, handler: { (action) in
+                            exit(0)
+                        }))
+                        self.present(aC, animated: true) { }
                     } catch {
                         print(error)
                     }
