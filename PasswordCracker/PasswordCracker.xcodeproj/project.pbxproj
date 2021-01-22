@@ -26,6 +26,7 @@
 		B99223A125B9304300884905 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B992239E25B9303F00884905 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B99223A325B9313600884905 /* Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99223A225B9313600884905 /* Number.swift */; };
 		B99223CB25B973BB00884905 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99223CA25B973BB00884905 /* SettingVC.swift */; };
+		B992242125BAA83E00884905 /* default.realm in Resources */ = {isa = PBXBuildFile; fileRef = B992242025BAA83E00884905 /* default.realm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -63,6 +64,7 @@
 		B992239E25B9303F00884905 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		B99223A225B9313600884905 /* Number.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Number.swift; sourceTree = "<group>"; };
 		B99223CA25B973BB00884905 /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
+		B992242025BAA83E00884905 /* default.realm */ = {isa = PBXFileReference; lastKnownFileType = file; path = default.realm; sourceTree = "<group>"; };
 		C1F40F2476A44011B534C6DB /* Pods_PasswordCracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PasswordCracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE21A2B554B1925D213E297E /* Pods-PasswordCracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PasswordCracker.debug.xcconfig"; path = "Target Support Files/Pods-PasswordCracker/Pods-PasswordCracker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -125,6 +127,7 @@
 		B992231D25B803E900884905 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				B992242025BAA83E00884905 /* default.realm */,
 				B99222EB25B7FD8000884905 /* Info.plist */,
 				B99222E625B7FD8000884905 /* Assets.xcassets */,
 				B99222E325B7FD7F00884905 /* Main.storyboard */,
@@ -257,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B99222EA25B7FD8000884905 /* LaunchScreen.storyboard in Resources */,
+				B992242125BAA83E00884905 /* default.realm in Resources */,
 				B99222E725B7FD8000884905 /* Assets.xcassets in Resources */,
 				B99222E525B7FD7F00884905 /* Main.storyboard in Resources */,
 			);
@@ -478,7 +482,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.iGhibli.PasswordCracker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dbcq.xf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = neibu2_20210115_dev;
 				SWIFT_VERSION = 5.0;
@@ -492,9 +496,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = G5G45AG832;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3CKG5BNSAM;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/PasswordCracker/Third",
@@ -505,9 +509,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.iGhibli.PasswordCracker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dbcq.xf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = neibu2_20210115_dev;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

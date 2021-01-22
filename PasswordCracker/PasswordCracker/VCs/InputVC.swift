@@ -16,7 +16,7 @@ class InputVC: UIViewController {
     
     lazy var pwInputView: SPayPassWordView = {
         let pw = SPayPassWordView()
-        pw.lenght = 6
+        pw.lenght = 5
         pw.borderColor = .link
         pw.borderRadius = 8.0
         pw.borderWidth = 2.0
@@ -133,6 +133,7 @@ extension InputVC: SPayPassWordViewDelegate {
                 self.inputEnabledChange(isEnabled: false, with: "此密码已经尝试过!")
             }else {
                 self.inputEnabledChange(isEnabled: true, with: "")
+                currentNumber = result
             }
         }
     }

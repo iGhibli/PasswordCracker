@@ -54,7 +54,7 @@
                                                                 <constraint firstAttribute="width" constant="25" id="BJl-7S-MHN"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="新建密码库" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="etv-Bc-aBU">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="重置密码库" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="etv-Bc-aBU">
                                                             <rect key="frame" x="45" y="0.0" width="276" height="25"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                             <nil key="highlightedColor"/>
@@ -270,8 +270,8 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <outlet property="cfmNumber" destination="D69-cL-xun" id="T1w-9K-HzV"/>
-                        <outlet property="cfmdNumber" destination="nGV-6d-H5d" id="9a3-Qv-oME"/>
+                        <outlet property="cfmNumber" destination="nGV-6d-H5d" id="pS8-Hp-Mb3"/>
+                        <outlet property="cfmdNumber" destination="D69-cL-xun" id="7DV-BG-qWN"/>
                         <outlet property="totalNumber" destination="p60-2L-uPy" id="XwJ-80-Yco"/>
                     </connections>
                 </tableViewController>
