@@ -42,7 +42,7 @@ class OutputVC: UIViewController {
         view.backgroundColor = .white
         self.title = "随机获取"
         
-        let barButtonItem = UIBarButtonItem(image: UIImage(systemName: "command.circle"), style: .done, target: self, action:#selector(showSettingVC))
+        let barButtonItem = UIBarButtonItem(image: UIImage(named: "setting"), style: .done, target: self, action:#selector(showSettingVC))
         navigationItem.rightBarButtonItem = barButtonItem
         
         view.addSubview(getButton)

@@ -20,8 +20,8 @@ class TabBarC: UITabBarController {
         // menubar.arrow.up.rectangle
         // menubar.arrow.down.rectangle
         
-        addChild("自主录入", "dock.arrow.down.rectangle", InputVC.self)
-        addChild("随机获取", "dock.arrow.up.rectangle", OutputVC.self)
+        addChild("自主录入", "input_n", InputVC.self)
+        addChild("随机获取", "output_n", OutputVC.self)
     }
     
     func addChild(_ title: String,
@@ -29,7 +29,7 @@ class TabBarC: UITabBarController {
                   _ type: UIViewController.Type) {
         let child = UINavigationController(rootViewController: type.init())
         child.title = title
-        child.tabBarItem.image = UIImage(systemName: image)
+        child.tabBarItem.image = UIImage(named: image)
         child.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.link], for: .selected)
         addChild(child)
     }

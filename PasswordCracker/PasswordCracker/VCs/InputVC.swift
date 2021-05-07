@@ -50,7 +50,7 @@ class InputVC: UIViewController {
         self.title = "自主录入"
         print("Realm file path: " + Realm.Configuration.defaultConfiguration.fileURL!.absoluteString)
         
-        let barButtonItem = UIBarButtonItem(image: UIImage(systemName: "command.circle"), style: .done, target: self, action:#selector(showSettingVC))
+        let barButtonItem = UIBarButtonItem(image: UIImage(named: "setting"), style: .done, target: self, action:#selector(showSettingVC))
         navigationItem.rightBarButtonItem = barButtonItem
         
         view.addSubview(pwInputView)
